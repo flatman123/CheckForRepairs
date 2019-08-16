@@ -15,7 +15,6 @@ customers.set('cust2',[
 	{name: 'Kaleridan'}
 ]);
 
-
 const prntCustName = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(cName => {
@@ -36,17 +35,9 @@ const checkNextRepairDate = () => {
 	}
 )};
 
-
 const names = prntCustName();
 
 names
-.then(d => {
-	console.log(d)
-	return checkNextRepairDate();
-})
-
-.then(repairs => {
-	console.log(repairs);
-})
-
+.then(d => {console.log(d)return checkNextRepairDate();})
+.then(repairs => {console.log(repairs);})
 .catch(() => {console.log('ERROS')});
